@@ -1,0 +1,2 @@
+INSERT INTO `finitivedb`.`admins` (`id`, `email`, `password`, `salt`, `username`, `name`, `url_photo`, `previllage`, `created_at`, `deleted_at`) VALUES (NULL, 'tommyatmaji@gmail.com', 'tommm14', NULL, 'tommy14', 'Pratomo Adi Atmaji', NULL, '1', CURRENT_TIMESTAMP, NULL);
+
