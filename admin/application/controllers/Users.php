@@ -13,8 +13,8 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->model('usermodel');
-        $user = $this->usermodel->getUserList();
+        $this->load->model('adminmodel');
+        $user = $this->adminmodel->getAdminList();
         $header['title'] = 'Users';
         $content = array(
             'table' => $user

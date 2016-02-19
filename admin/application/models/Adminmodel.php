@@ -8,7 +8,7 @@ class Adminmodel extends CI_Model {
     }
 
     public function getadminList(){
-        return $this->db->get('admin');
+        return $this->db->get('admins');
     }
 
     public function getadminByID($id){
@@ -16,9 +16,9 @@ class Adminmodel extends CI_Model {
         return $this->db->get('admin');
     }
 
-    public function getadminByUsername($adminname){
-        $this->db->where('adminname_admin', $adminname);
-        return $this->db->get('admin');
+    public function getAdminByUsername($adminname){
+        $this->db->where('username', $adminname);
+        return $this->db->get('admins');
     }
 
     public function insertadmin($id, $admin, $pass, $salt, $date, $role){

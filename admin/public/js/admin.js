@@ -78,7 +78,7 @@ $(document).ready(function () {
             url: url
         }).done(function (data) {
             if (data == "1"){
-                window.location.replace($('#url').attr('href') + 'users');
+                window.location.replace($('#url').attr('href'));
             } else {
                 alert('Failed to log out')
             }

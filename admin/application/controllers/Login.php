@@ -21,19 +21,20 @@ class Login extends CI_Controller {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            $this->load->model('usermodel');
-            $user = $this->usermodel->getUserByUsername($username);
-            if($user->num_rows() == 1){
-                foreach ($user->result() as $row){
-                    if($this->verify($password, $row->salt_user, $row->password_user)){
+            $this->load->model('adminmodel');
+            $admin = $this->adminmodel->getAdminByUsername($username);
+            if($admin->num_rows() == 1){
+                foreach ($admin->result() as $row){
+                    if($this->verify($password, $row->salt, $row->password)){
 
-                        $this->session->set_userdata('iduser_ppkk', $row->id_user);
-                        $this->session->set_userdata('username_ppkk', $row->username_user);
-                        $this->session->set_userdata('role_ppkk', $row->role_user);
+                        $this->session->set_userdata('id', $row->id);
+                        $this->session->set_userdata('username', $row->username);
+                        $this->session->set_userdata('role', 'General Admin');
+                        $this->session->set_userdata('coderole', $row->previllage);
                         $this->session->set_userdata('finadmin', 'yesiam');
 
-                        $date = date("Y:m:d H:i:s");
-                        $this->usermodel->updateLastLogin($row->id_user, $date);
+                        // $date = date("Y:m:d H:i:s");
+                        // $this->adminmodel->updateLastLogin($row->id, $date);
 
                         echo json_encode(array('st' => 1, 'msg' => 'Done'));
                     } else {

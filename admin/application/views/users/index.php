@@ -1,14 +1,14 @@
             <div class="container-fluid">
                 <div class="side-body">
                     <div class="page-title">
-                        <span class="title">Users</span>
-                        <div class="description">Managing user who can log in to this administration area</div>
+                        <span class="title">Admin</span>
+                        <div class="description">Manage Admin user who can login and access this page</div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="panel fresh-color panel-info">
                                 <div class="panel-heading">
-                                    <h3>Registered User <button class="btn btn-primary pull-right" style="margin-top: -10px;" data-toggle="modal" data-target="#modalAddUser"><i class="fa fa-plus"></i></button></h3>
+                                    <h3>Registered Admin <button class="btn btn-primary pull-right" style="margin-top: -10px;" data-toggle="modal" data-target="#modalAddUser"><i class="fa fa-plus"></i></button></h3>
 
                                 </div>
                                 <div class="panel-body">
@@ -42,12 +42,12 @@
                                                     $i++;
                                                     echo '<tr>
                                                             <td>'. $i.'</td>
-                                                            <td>'. $row->id_user .'</td>
-                                                            <td>'. $row->username_user .'</td>
-                                                            <td>'. $row->dateregistered_user .'</td>
-                                                            <td>'. $row->lastlogin_user .'</td>
-                                                            <td>'. $row->role_user .'</td>
-                                                            <td><button class="btn btn-danger btn-xs pull-right" onClick="deleteUser(\''. $row->id_user . '\')">
+                                                            <td>'. $row->id .'</td>
+                                                            <td>'. $row->username .'</td>
+                                                            <td>'. $row->created_at .'</td>
+                                                            <td>'. $row->last_login .'</td>
+                                                            <td>'. $this->session->userdata('role').'</td>
+                                                            <td><button class="btn btn-danger btn-xs pull-right" onClick="deleteUser(\''. $row->id . '\')">
                                                                     <i class="fa fa-trash"></i>
                                                                 </button></td>
                                                          </tr>';

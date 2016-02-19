@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title><?php echo $title ?> | PPKK Administration</title>
+    <title><?php echo $title ?> Finitive Admin Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
@@ -51,7 +51,7 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>public/js/news.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>public/js/acf.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>public/js/loadalumni.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>public/js/user.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>public/js/admin.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>public/js/gallery.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>public/js/event.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>public/js/app.js"></script>
@@ -77,13 +77,13 @@
                             <i class="fa fa-times icon" style="color: #fff"></i>
                         </button>
                         <li class="dropdown profile">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username_ppkk'); ?> <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu animated fadeInDown">
                                 <li>
                                     <div class="profile-info">
-                                        <h4 class="username"><?php echo $this->session->userdata('username_ppkk'); ?></h4>
-                                        <h4><?php  echo $this->session->userdata('role_ppkk'); ?></h4>
-                                        <p>User ID : <?php  echo $this->session->userdata('iduser_ppkk'); ?></p>
+                                        <h4 class="username"><?php echo $this->session->userdata('username'); ?></h4>
+                                        <h4><?php  echo $this->session->userdata('role'); ?></h4>
+                                        <p>User ID : <?php  echo $this->session->userdata('id'); ?></p>
                                         <p>IP : <?php echo $this->input->ip_address(); ?></p>
                                         <p>Agent : <?php echo $this->input->user_agent(); ?></p>
                                         <div class="btn-group margin-bottom-2x" role="group">
@@ -103,7 +103,7 @@
                         <div class="navbar-header">
                             <a class="navbar-brand" href="<?php echo base_url(); ?>" id="url">
                                 <div class="icon fa fa-wrench"></div>
-                                <div class="title">PPKK Administration</div>
+                                <div class="title">Finitive Administration</div>
                             </a>
                             <button type="button" class="navbar-expand-toggle pull-right visible-xs">
                                 <i class="fa fa-times icon"></i>
@@ -117,46 +117,31 @@
                             </li>
                             <li <?php if ($title == "Users") echo'class="active"'; ?>>
                                 <a href="<?php echo base_url(); ?>users">
-                                    <span class="icon fa fa-users"></span><span class="title">User</span>
+                                    <span class="icon fa fa-users"></span><span class="title">Admin Directory</span>
                                 </a>
                             </li>
                             <li class="panel panel-default dropdown <?php if ($title == "Article") echo 'active'; ?>">
                                 <a data-toggle="collapse" href="#dropdown-element">
-                                    <span class="icon fa fa-file-text-o"></span><span class="title">Article</span>
+                                    <span class="icon fa fa-diamond"></span><span class="title">Actions</span>
                                 </a>
                                 <!-- Dropdown level 1 -->
                                 <div id="dropdown-element" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul class="nav navbar-nav">
-                                            <li><a href="<?php echo base_url(); ?>news">News</a>
+                                            <li><a href="<?php echo base_url(); ?>news">Approval</a>
                                             </li>
-                                            <li><a href="<?php echo base_url(); ?>gallery">Gallery</a>
+                                            <li><a href="<?php echo base_url(); ?>gallery">Rejected</a>
                                             </li>
-                                            <li><a href="<?php echo base_url(); ?>event">Event</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="panel panel-default dropdown <?php if ($title == "Career Fair") echo 'active'; ?>">
-                                <a data-toggle="collapse" href="#dropdown-elementu">
-                                    <span class="icon fa fa-university"></span><span class="title">Career Fair</span>
-                                </a>
-                                <!-- Dropdown level 1 -->
-                                <div id="dropdown-elementu" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul class="nav navbar-nav">
-                                            <li><a href="<?php echo base_url(); ?>careerfair">Participants</a>
-                                            </li>
-                                            <li><a href="<?php echo base_url(); ?>careerfair/attendance">Attendance</a>
+                                            <li><a href="<?php echo base_url(); ?>event">Publish</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
+                            
                             <li>
                                 <a href="#">
-                                    <span class="icon fa fa-briefcase"></span><span class="title">Job Vacancy</span>
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Blog</span>
                                 </a>
                             </li>
                             <li <?php if ($title == "Alumni") echo'class="active"'; ?>>
