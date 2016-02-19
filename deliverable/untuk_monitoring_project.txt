@@ -1,0 +1,33 @@
+---------Jika ingin melihat project dan progress ini---------
+khusus nya buat agas dan ratih
+
+step 1
+instal xampp , source ada https://www.apachefriends.org/download.html pilih yang 5.6.15 / PHP 5.6.15
+
+step 2
+setelah xampp terinstall cari di menu laptop dengan search keyword "xampp control panel" dan open
+
+step 3
+setelah terbuka klik start pada apache dan mysql
+
+step 4
+taruh project ini di folder xampp/htdocs (folder xampp biasanya di letakkan oleh sistem di disk c / disk untuk sistem)
+
+step 5
+buka browser dan ketikkan localhost/phpmyadmin dan klik menu database
+
+step 6
+create database dengan nama finitivedb
+
+step 7
+setelah terbuat lakukan refresh pada browser dan cari di sidebar kiri dengan tulisan finitivedb klik tulisan finitivedb di side bar tersebut
+
+step 8
+cari menu import, setelah di klik choose cari database yang ada di project ini letaknya ada di finitivedb.pro/deliverable/database, lalu ok ok saja
+
+step 9
+setelah database terbuat dan sudah d copy project nya di htdocs maka buka browser anda dan tuliskan url localhost/finitive.pro
+untuk halaman admin localhost/finitive.pro/admin
+
+
+
