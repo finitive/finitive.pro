@@ -1,0 +1,10 @@
+INSERT INTO `finitivedb`.`users` (`id`, `email`, `password`, `salt`, `name`, `url_photo`, `alamat`, `url_scan_ktp`, `is_investors`, `is_appliers`, `created_at`, `deleted_at`) VALUES (NULL, 'kenny@gmail.com', 'dfdfdf', NULL, 'Kenny', NULL, 'Jln. Manggis No. 9', NULL, '1', '0', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`users` (`id`, `email`, `password`, `salt`, `name`, `url_photo`, `alamat`, `url_scan_ktp`, `is_investors`, `is_appliers`, `created_at`, `deleted_at`) VALUES (NULL, 'halim@gmail.com', 'dfdfdfd', NULL, 'Halim', NULL, NULL, NULL, '0', '1', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`users` (`id`, `email`, `password`, `salt`, `name`, `url_photo`, `alamat`, `url_scan_ktp`, `is_investors`, `is_appliers`, `created_at`, `deleted_at`) VALUES ('3', 'tommyatmaji@gmail.com', '@pratomo', NULL, 'Pratomo Adi Atmaji', NULL, 'Jaya Harmoni JH 12 Nomer 19', NULL, '0', '1', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`users` (`id`, `email`, `password`, `salt`, `name`, `url_photo`, `alamat`, `url_scan_ktp`, `is_investors`, `is_appliers`, `created_at`, `deleted_at`) VALUES ('4', 'popp@gmail.com', 'pppp', NULL, 'parampa', NULL, 'galaxy garden, surabaya', NULL, '0', '1', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`users` (`id`, `email`, `password`, `salt`, `name`, `url_photo`, `alamat`, `url_scan_ktp`, `is_investors`, `is_appliers`, `created_at`, `deleted_at`) VALUES ('5', 'tommyadiatmaji@yahoo.co.id', '@pratomo', NULL, 'tommy adi atmaji', NULL, 'perum bumi bulu indah, probolinggo', NULL, '0', '1', CURRENT_TIMESTAMP, NULL);
+

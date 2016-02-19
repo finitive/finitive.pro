@@ -1,0 +1,9 @@
+INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Jawa Timur', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Jawa Tengah', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Jawa Barat', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Kalimantan Selatan', CURRENT_TIMESTAMP, NULL);
+
+INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Nusa Tenggara Barat', CURRENT_TIMESTAMP, NULL);
