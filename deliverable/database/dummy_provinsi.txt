@@ -1,9 +1,35 @@
-INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Jawa Timur', CURRENT_TIMESTAMP, NULL);
 
-INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Jawa Tengah', CURRENT_TIMESTAMP, NULL);
-
-INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Jawa Barat', CURRENT_TIMESTAMP, NULL);
-
-INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Kalimantan Selatan', CURRENT_TIMESTAMP, NULL);
-
-INSERT INTO `finitivedb`.`provinces` (`id`, `province`, `created_at`, `deleted_at`) VALUES (NULL, 'Nusa Tenggara Barat', CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('1', 'Nanggroe Aceh Darussalam',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('2', 'Sumatera Utara',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('3', 'Sumatera Barat',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('4', 'Riau',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('5', 'Kepulauan Riau',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('6', 'Kepulauan Bangka-Belitung',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('7', 'Jambi',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('8', 'Bengkulu',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('9', 'Sumatera Selatan',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('10', 'Lampung',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('11', 'Banten',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('12', 'DKI Jakarta',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('13', 'Jawa Barat',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('14', 'Jawa Tengah',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('15', 'Daerah Istimewa Yogyakarta  ',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('16', 'Jawa Timur',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('17', 'Bali',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('18', 'Nusa Tenggara Barat',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('19', 'Nusa Tenggara Timur',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('20', 'Kalimantan Barat',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('21', 'Kalimantan Tengah',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('22', 'Kalimantan Selatan',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('23', 'Kalimantan Timur',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('24', 'Gorontalo',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('25', 'Sulawesi Selatan',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('26', 'Sulawesi Tenggara',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('27', 'Sulawesi Tengah',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('28', 'Sulawesi Utara',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('29', 'Sulawesi Barat',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('30', 'Maluku',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('31', 'Maluku Utara',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('32', 'Papua Barat',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('33', 'Papua',CURRENT_TIMESTAMP, NULL);
+INSERT INTO `provinces` VALUES ('34', 'Kalimantan Utara',CURRENT_TIMESTAMP, NULL);

@@ -1,2 +1,2 @@
-INSERT INTO `finitivedb`.`admins` (`id`, `email`, `password`, `salt`, `username`, `name`, `url_photo`, `previllage`, `created_at`, `deleted_at`) VALUES (NULL, 'tommyatmaji@gmail.com', 'tommm14', NULL, 'tommy14', 'Pratomo Adi Atmaji', NULL, '1', CURRENT_TIMESTAMP, NULL);
-
+INSERT INTO `admins` (`id`, `email`, `password`, `salt`, `username`, `name`, `url_photo`, `previllage`, `last_login`, `created_at`, `deleted_at`) VALUES
+(1, 'devan.astiko@gmail.com', '$2y$11$e2bd01efe450bd02d0d0aeVudiVWVShxwabvxXT.tWIUF9dtDZxB6', '$2y$11$e2bd01efe450bd02d0d0ae', 'devanastiko', 'Devan Astiko Baktiyar', NULL, 1, '2016-02-19 17:32:36', '2016-02-09 11:22:48', NULL);
