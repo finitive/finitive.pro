@@ -4,6 +4,7 @@ $(document).ready(function () {
         $('#submitButton').attr('disabled', true);
         var formData = new FormData($("#addUserForm")[0]);
         var url = $('#url').attr('href') + 'users/add';
+
         $.ajax({
             url: url,
             type: 'post',
@@ -27,6 +28,8 @@ $(document).ready(function () {
             } else {
                 window.location.replace($('#url').attr('href') + 'users');
             }
+
+            alert(data.st);
         });
     });
 
@@ -94,11 +97,14 @@ function deleteUser(id) {
             'target': id,
             '<?php echo $this->security->get_csrf_token_name(); ?>': '<?php echo $this->security->get_csrf_hash(); ?>'
         };
+
+       
         $.ajax({
             url: url,
             type: 'POST',
             data: post_data,
             success: function (data) {
+
                 if(data == 1){
                     alert('Deleted successfully');
                     window.location.replace($('#url').attr('href') + 'users');

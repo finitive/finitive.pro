@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
+//funtion contruct untuk mengidentifikasi analisa sebelum masuk ke function index. 
+//di sini di filter sessionnya apakah sudah melakukan login atau belum. 
+//bila sudah pernah login dan belum logout atau belum d destroy cache nya maka di redirect di base url, 
+//yaitu finitive.pro/admin/Home
+
     public function __construct(){
         parent::__construct();
         $this->load->library('session');
@@ -10,6 +15,10 @@ class Users extends CI_Controller {
             redirect(base_url().'login');
         }
     }
+
+
+//index dari controller ini adalah untuk mengambil tabel user admin yang ada di database dan data tabel 
+//admins tersebut dikirim ke view view/user/index untuk di tampilkan datanya di view
 
 	public function index()
 	{
@@ -24,11 +33,12 @@ class Users extends CI_Controller {
         $this->load->view('footer');
 	}
 
+//function untuk add admin baru dengan tingkatan admin
     public function add(){
         if ($this->input->is_ajax_request()){
             $this->load->library('form_validation');
 
-            $this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric|min_length[5]|max_length[20]|is_unique[user.username_user]');
+            $this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric|min_length[5]|max_length[20]|is_unique[admins.username]');
             $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
             $this->form_validation->set_rules('confpassword', 'Confirm Password', 'required|matches[password]');
             $this->form_validation->set_rules('role', 'Role', 'required');
@@ -41,13 +51,13 @@ class Users extends CI_Controller {
             {
 
                 $date = date('Y-m-d H:i:s');
-                $id = 'PPKK' . date('YmdHis');
+                
                 $user = $this->input->post('username');
                 $plainpass = $this->input->post('password');
                 $role = $this->input->post('role');
                 $hashed = $this->generateHash($plainpass);
-                $this->load->model('usermodel');
-                $this->usermodel->insertUser($id, $user, $hashed['pass'], $hashed['salt'], $date, $role);
+                $this->load->model('adminmodel');
+                $this->adminmodel->insertAdmin($user, $hashed['pass'], $hashed['salt'], $date, $role);
                 echo json_encode(array('st' => 1, 'msg' => 'done'));
             }
         } else {
@@ -55,11 +65,15 @@ class Users extends CI_Controller {
         }
 
     }
+
+//function untuk delete admin
+
     public function delete(){
         if ($this->input->is_ajax_request()) {
             $target = $this->input->post('target');
-            $this->load->model('usermodel');
-            if($this->usermodel->deleteUser($target)){
+            $date = date('Y-m-d H:i:s');
+            $this->load->model('adminmodel');
+            if($this->adminmodel->deleteAdmin($target,$date)){
                 echo '1';
             } else {
                 echo '0';
@@ -69,6 +83,7 @@ class Users extends CI_Controller {
         }
     }
 
+//function untuk ganti password admin
     public function changePassword(){
         if ($this->input->is_ajax_request()){
             $this->load->library('form_validation');
@@ -83,16 +98,16 @@ class Users extends CI_Controller {
             }
             else
             {
-                $id = $this->session->userdata('iduser_ppkk');
+                $id = $this->session->userdata('id');
                 $plainpass = $this->input->post('oldpassword');
                 $newpass = $this->input->post('newpassword');
 
-                $this->load->model('usermodel');
-                $user = $this->usermodel->getUserByID($id);
+                $this->load->model('adminmodel');
+                $user = $this->adminmodel->getAdminByID($id);
                 foreach ($user->result() as $row){
-                    if($this->verify($plainpass, $row->salt_user, $row->password_user)){
+                    if($this->verify($plainpass, $row->salt, $row->password)){
                         $hashed = $this->generateHash($newpass);
-                        $this->usermodel->updatePasswordUser($id, $hashed['pass'], $hashed['salt']);
+                        $this->adminmodel->updatePasswordAdmin($id, $hashed['pass'], $hashed['salt']);
                         echo json_encode(array('st' => 1, 'msg' => 'done'));
                     } else {
                         echo json_encode(array('st' => 2, 'msg' => 'Your old password is incorrect'));
@@ -104,6 +119,7 @@ class Users extends CI_Controller {
         }
     }
 
+//function untuk generate enkripsi dari password baru
     private function generateHash($password) {
         if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH) {
             $salt = '$2y$11$' . substr(md5(uniqid(rand(), true)), 0, 22);

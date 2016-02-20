@@ -39,18 +39,42 @@
                                             <?php
                                                 $i = 0;
                                                 foreach($table->result() as $row){
-                                                    $i++;
+                                                    if($row->deleted_at == NULL){
+                                                        $i++;
                                                     echo '<tr>
                                                             <td>'. $i.'</td>
                                                             <td>'. $row->id .'</td>
                                                             <td>'. $row->username .'</td>
                                                             <td>'. $row->created_at .'</td>
                                                             <td>'. $row->last_login .'</td>
-                                                            <td>'. $this->session->userdata('role').'</td>
+                                                            <td>';
+
+                                                     $var = $row->previllage;
+                                                    if($var == 1){
+                                                        echo 'General Admin</td>
                                                             <td><button class="btn btn-danger btn-xs pull-right" onClick="deleteUser(\''. $row->id . '\')">
                                                                     <i class="fa fa-trash"></i>
                                                                 </button></td>
                                                          </tr>';
+                                                    }
+                                                    
+                                                    elseif($row->previllage==2){
+                                                        echo 'Blog Admin</td>
+                                                            <td><button class="btn btn-danger btn-xs pull-right" onClick="deleteUser(\''. $row->id . '\')">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </button></td>
+                                                         </tr>';
+                                                    }
+                                                    elseif($row->previllage==3){
+                                                        echo 'Approval Action Admin</td>
+                                                            <td><button class="btn btn-danger btn-xs pull-right" onClick="deleteUser(\''. $row->id . '\')">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </button></td>
+                                                         </tr>';
+                                                    }
+                                                            
+                                                    }
+                                                    
                                                 }
                                             ?>
                                         </tbody>
@@ -91,19 +115,19 @@
                                           <div class="radio3 radio-check radio-inline">
                                             <input type="radio" id="role1" name="role" value="Writer" checked="">
                                             <label for="role1">
-                                              Writer
+                                              General Admin
                                             </label>
                                           </div>
                                           <div class="radio3 radio-check radio-inline">
                                             <input type="radio" id="role2" name="role" value="Translator">
                                             <label for="role2">
-                                              Translator
+                                              Blog Admin
                                             </label>
                                           </div>
                                           <div class="radio3 radio-check radio-danger radio-inline">
                                             <input type="radio" id="role3" name="role" value="Administrator">
                                             <label for="role3">
-                                              Administrator
+                                              Approval Action Admin
                                             </label>
                                           </div>
                                         </div>
