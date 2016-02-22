@@ -120,6 +120,11 @@
                                     <span class="icon fa fa-users"></span><span class="title">Admin Directory</span>
                                 </a>
                             </li>
+                            <li <?php if ($title == "Alumni") echo'class="active"'; ?>>
+                                <a href="<?php echo base_url(); ?>">
+                                    <span class="icon fa fa-user"></span><span class="title">Personalization</span>
+                                </a>
+                            </li>
                             <li class="panel panel-default dropdown <?php if ($title == "Article") echo 'active'; ?>">
                                 <a data-toggle="collapse" href="#dropdown-element">
                                     <span class="icon fa fa-diamond"></span><span class="title">Actions</span>
@@ -128,11 +133,11 @@
                                 <div id="dropdown-element" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul class="nav navbar-nav">
-                                            <li><a href="<?php echo base_url(); ?>news">Approval</a>
+                                            <li><a href="<?php echo base_url(); ?>">Approval</a>
                                             </li>
-                                            <li><a href="<?php echo base_url(); ?>gallery">Rejected</a>
+                                            <li><a href="<?php echo base_url(); ?>">Rejected</a>
                                             </li>
-                                            <li><a href="<?php echo base_url(); ?>event">Publish</a>
+                                            <li><a href="<?php echo base_url(); ?>">Publish</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -144,11 +149,7 @@
                                     <span class="icon fa fa-file-text-o"></span><span class="title">Blog</span>
                                 </a>
                             </li>
-                            <li <?php if ($title == "Alumni") echo'class="active"'; ?>>
-                                <a href="<?php echo base_url(); ?>alumni">
-                                    <span class="icon fa fa-graduation-cap"></span><span class="title">Alumni Data</span>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
