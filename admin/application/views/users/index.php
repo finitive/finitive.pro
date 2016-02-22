@@ -113,19 +113,19 @@
                                         <div>
                                         <label>Role*</label><br>
                                           <div class="radio3 radio-check radio-inline">
-                                            <input type="radio" id="role1" name="role" value="Writer" checked="">
+                                            <input type="radio" id="role1" name="role" value="1" checked="">
                                             <label for="role1">
                                               General Admin
                                             </label>
                                           </div>
                                           <div class="radio3 radio-check radio-inline">
-                                            <input type="radio" id="role2" name="role" value="Translator">
+                                            <input type="radio" id="role2" name="role" value="2">
                                             <label for="role2">
                                               Blog Admin
                                             </label>
                                           </div>
-                                          <div class="radio3 radio-check radio-danger radio-inline">
-                                            <input type="radio" id="role3" name="role" value="Administrator">
+                                          <div class="radio3 radio-check radio-inline">
+                                            <input type="radio" id="role3" name="role" value="3">
                                             <label for="role3">
                                               Approval Action Admin
                                             </label>
