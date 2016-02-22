@@ -7,7 +7,7 @@
 
 - folder public untuk menyimpan file atau gambar secara public
 
-- install tortoise git atau aplikasi lain untuk clone di github, commit, push, dan pull sehingga lebih efisien
+- install tortoisegit atau aplikasi lain untuk clone di github, commit, push, dan pull sehingga lebih efisien
 
 
 +++++++++ Tata cara penulisan koding ++++++++++++++++
