@@ -1,0 +1,13 @@
+INSERT INTO `actions` (`id`, `title`, `tag_line`, `short_description`, `goal_founding`, `date_upload`, `date_expired`, `long_description`, `url_photo1`, `url_photo2`, `url_photo3`, `url_video`, `ishold`, `created_at`, `deleted_at`, `cities_id`, `cities_provinces_id`, `categories_id`) VALUES (NULL, 'Krayon Siti Mewah', 'recycling a thing makes your colourfull life', 'Krayon siti mewa adalah krayon yang terbuat dari limbah pabrik untuk diekstrak warnanya dan dijadikan krayon yang aman untuk semua kalangan manusia', '50000000', '2016-02-23 11:14:00', '2017-07-08 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'th-292x204-1.jpg', 'th-292x204-1.jpg', 'th-292x204-1.jpg', NULL, '1', '2016-02-23 09:00:00', NULL, '1', '1', '1')

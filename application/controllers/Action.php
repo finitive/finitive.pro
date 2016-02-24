@@ -21,13 +21,35 @@ class Action extends CI_Controller {
 	public function index()
 	{
 		//ini untuk menampilkan view  action
+		
+		$this->showAction();
+		
+
+	}
+
+	public function showAction(){
+		$this->load->model('actionmodel');
+		$actiontable=$this->actionmodel->actionList();
 		$this->load->view('header');
 		$this->load->view('action/begin');
-		$this->load->view('action/single_action');
+		foreach ($actiontable as $row['data']) {
+			
+			$this->load->view('action/single_action', $row);
+		}
 		$this->load->view('action/end');
 		$this->load->view('action/sidebar');
 		$this->load->view('footer');
 
-		// echo base_url();
 	}
+
+
+	public function mostLike(){
+
+	}
+
+
+	public function byCategoties(){
+
+	}
+	
 }

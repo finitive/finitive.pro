@@ -3,15 +3,15 @@
                                 <div class="top-project-info">
                                     <div class="content-info-short clearfix">
                                         <a href="#" class="thumb-img">
-                                            <img src="<?php echo base_url(); ?>public/images/ex/th-292x204-1.jpg" alt="$TITLE">
+                                            <img src="<?php echo base_url(); ?>public/images/ex/<?php echo $data->url_photo1 ;?>" alt="$TITLE">
                                         </a>
                                         <div class="wrap-short-detail">
-                                            <h3 class="rs acticle-title"><a class="be-fc-orange" href="#">Project title</a></h3>
-                                            <p class="rs tiny-desc">by <a href="#" class="fw-b fc-gray be-fc-orange">John Doe</a></p>
-                                            <p class="rs title-description">Nam sit amet est sapien, a faucibus purus. Sed commodo facilisis tempus. Pellentesque placerat elementum adipiscing.</p>
+                                            <h3 class="rs acticle-title"><a class="be-fc-orange" href="#"><?php echo $data->title; ?></a></h3>
+                                            <p class="rs tiny-desc">by <a href="#" class="fw-b fc-gray be-fc-orange"> <?php echo $data->name;?></a></p>
+                                            <p class="rs title-description"><?php echo $data->tag_line ;?></p>
                                             <p class="rs project-location">
                                                 <i class="icon iLocation"></i>
-                                                New York, NY
+                                                <?php echo $data->city;?>
                                             </p>
                                         </div>
                                     </div>
@@ -30,7 +30,7 @@
                                         <div class="sep"></div>
                                         <div class="fee-item">
                                             <p class="rs lbl">Pledged</p>
-                                            <span class="val">$38,000</span>
+                                            <span class="val">RP <?php echo $data->goal_founding ;?></span>
                                         </div>
                                         <div class="sep"></div>
                                         <div class="fee-item">
@@ -41,5 +41,6 @@
                                     <div class="clear"></div>
                                 </div>
                             </div>
+                        
                         </div><!--end: .grid_3 > .project-short-->
                         

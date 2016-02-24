@@ -1,3 +1,4 @@
+ 		
  		<div class="clear"></div>
                     </div>
                 </div><!--end: .list-project-in-category -->
